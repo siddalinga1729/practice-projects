@@ -1,0 +1,21 @@
+package com.SchoolManagementapp.entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+@Entity
+@Table(name="subject_details")
+public class Subject {
+private int id;
+private String className;
+private String subName;
+private long subCode;
+}

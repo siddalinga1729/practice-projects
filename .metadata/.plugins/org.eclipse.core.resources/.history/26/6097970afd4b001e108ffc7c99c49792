@@ -1,0 +1,11 @@
+package practice;
+
+public class Test1 {
+	public static void main(String[] args) {
+		Test1 t = new Test2();
+	}
+
+}
+
+class Test2 extends Test1 {
+}

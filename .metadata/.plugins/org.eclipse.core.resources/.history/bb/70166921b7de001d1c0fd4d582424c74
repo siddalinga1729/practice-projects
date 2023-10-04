@@ -1,0 +1,18 @@
+package com.mappingdemo.entity;
+
+import java.util.Set;
+
+import jakarta.persistence.Entity;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class Student {
+private Long id;
+private String name;
+private Set<Course> courseName;
+}

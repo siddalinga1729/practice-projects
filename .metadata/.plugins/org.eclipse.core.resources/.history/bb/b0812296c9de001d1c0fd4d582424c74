@@ -1,0 +1,8 @@
+package com.mappingdemo.entity;
+
+import lombok.Data;
+
+@Data
+public class Laptop {
+
+}

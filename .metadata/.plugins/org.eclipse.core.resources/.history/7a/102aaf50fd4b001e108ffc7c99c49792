@@ -1,0 +1,37 @@
+package practice;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Test1 {
+	public static void main(String[] args) {
+		List<Integer> list = new ArrayList<>();
+		list.add(1);
+		list.add(2);
+		list.add(3);
+		List<Integer> list1 = new ArrayList<>();
+		list1.add(1);
+		list1.add(2);
+		list1.add(3);
+		List<Integer> compareTriplets = compareTriplets(list, list1);
+		System.out.println(compareTriplets);
+	}
+
+	public static List<Integer> compareTriplets(List<Integer> a, List<Integer> b) {
+		List<Integer> resulList = new ArrayList<>();
+		if (a.get(0) > b.get(0))
+			resulList.add(1);
+		if (a.get(0) < b.get(0))
+			resulList.add(1);
+		for (int i = 1; i < a.size() && i < b.size(); i++) {
+			if (a.get(i) > b.get(i))
+				resulList.add(0, resulList.get(0) + 1);
+			if (a.get(i) < b.get(i))
+				resulList.add(1, resulList.get(1) + 1);
+		}
+		return resulList;
+	}
+}
+
+class Test2 extends Test1 {
+}

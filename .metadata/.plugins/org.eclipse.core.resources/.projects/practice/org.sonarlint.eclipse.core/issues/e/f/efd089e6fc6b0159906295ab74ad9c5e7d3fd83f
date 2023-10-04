@@ -1,0 +1,36 @@
+
+Y
+java:S1481"&Remove this unused "y" local variable.(÷Àú8Ñ¥•€¤1HşeRMINORZ
+CODE_SMELL
+p	java:S106'"9Replace this use of System.out or System.err by a logger.(‰É†şÿÿÿÿ8áüü£1HÜcRMAJORZ
+CODE_SMELL
+p	java:S1063"9Replace this use of System.out or System.err by a logger.(‰É†şÿÿÿÿ8ÇÕ†€¤1HÂeRMAJORZ
+CODE_SMELL
+k	java:S106"9Replace this use of System.out or System.err by a logger.(à˜Ì…8ÕËëî¡1H™cRMAJORZ
+CODE_SMELL
+k	java:S106"9Replace this use of System.out or System.err by a logger.(±Ì»¶8ö•ı£1HùcRMAJORZ
+CODE_SMELL
+s	java:S125"<This block of commented-out lines of code should be removed.(Êîåâùÿÿÿÿ8Şêï¡1HŒbRMAJORZ
+CODE_SMELL
+p	java:S106-"9Replace this use of System.out or System.err by a logger.(µÏ…èùÿÿÿÿ8¯»–ı£1HÀfRMAJORZ
+CODE_SMELL
+k	java:S1064"9Replace this use of System.out or System.err by a logger.(‡Ô8·é‰€¤1HÑeRMAJORZ
+CODE_SMELL
+ˆ
+java:S1149"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(ÑÖÙƒıÿÿÿÿ8€›Úü£1HšcRMAJORZ
+CODE_SMELL
+k	java:S106!"9Replace this use of System.out or System.err by a logger.(ôœáˆ8Şè“ı£1H¤dRMAJORZ
+CODE_SMELL
+p	java:S106+"9Replace this use of System.out or System.err by a logger.(‰É†şÿÿÿÿ8¤èü£1H­cRMAJORZ
+CODE_SMELL
+j	java:S106&"9Replace this use of System.out or System.err by a logger.(µÉZ8×Ëùü£1HËcRMAJORZ
+CODE_SMELL
+k	java:S106."9Replace this use of System.out or System.err by a logger.(û±»¬8Ûœ÷ü£1HÁfRMAJORZ
+CODE_SMELL
+p	java:S106)"9Replace this use of System.out or System.err by a logger.(ùáÆŸùÿÿÿÿ8×Ëùü£1HÍcRMAJORZ
+CODE_SMELL
+p	java:S106#"9Replace this use of System.out or System.err by a logger.(‰É†şÿÿÿÿ8¯»–ı£1H´dRMAJORZ
+CODE_SMELL
+f
+java:S1128".Remove this unused import 'java.util.Scanner'.(ÒÜÅ¸úÿÿÿÿ8€›Úü£1H›cRMINORZ
+CODE_SMELL

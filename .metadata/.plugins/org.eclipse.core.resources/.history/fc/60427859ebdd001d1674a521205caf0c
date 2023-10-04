@@ -1,0 +1,5 @@
+package com.elementcollectiondemo.service;
+
+public interface StudentService {
+
+}

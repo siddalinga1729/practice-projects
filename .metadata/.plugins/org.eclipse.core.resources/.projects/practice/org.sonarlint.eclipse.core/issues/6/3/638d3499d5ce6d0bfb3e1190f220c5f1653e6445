@@ -1,0 +1,24 @@
+
+p	java:S106-"9Replace this use of System.out or System.err by a logger.(Ñ­±•øÿÿÿÿ8ºÀ¥¨1HÃvRMAJORZ
+CODE_SMELL
+Y
+java:S1481$"&Remove this unused "n" local variable.(Áİé…8ºÀ¥¨1HÄvRMINORZ
+CODE_SMELL
+Y
+java:S1481""&Remove this unused "p" local variable.(Ğ•Ï8ºÀ¥¨1HÅvRMINORZ
+CODE_SMELL
+X
+java:S1481#"&Remove this unused "z" local variable.( ÇÍ8ºÀ¥¨1HÆvRMINORZ
+CODE_SMELL
+s	java:S125."<This block of commented-out lines of code should be removed.(ñ‹–õøÿÿÿÿ8ºÀ¥¨1HÇvRMAJORZ
+CODE_SMELL
+b
+java:S3740"/Provide the parametrized type for this generic.(«úÁâ8°¾±É¯1HÊvRMAJORZ
+CODE_SMELL
+j	java:S106"9Replace this use of System.out or System.err by a logger.(È©ô+8°¾±É¯1HËvRMAJORZ
+CODE_SMELL
+t
+java:S2175"HA "Map<Integer, Character>" cannot contain a "char" in a "Integer" type.(ù¿Í“8°¾±É¯1HÌvRMAJORZBUG
+f
+java:S1128".Remove this unused import 'java.util.TreeMap'.(¨éˆèıÿÿÿÿ8°¾±É¯1HÍvRMINORZ
+CODE_SMELL

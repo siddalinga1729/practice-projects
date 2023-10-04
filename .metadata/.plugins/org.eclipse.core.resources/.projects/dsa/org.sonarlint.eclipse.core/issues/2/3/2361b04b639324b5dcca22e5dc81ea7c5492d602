@@ -1,0 +1,12 @@
+
+k	java:S106"9Replace this use of System.out or System.err by a logger.(´æž²8ŽóÉ˜¦1HîpRMAJORZ
+CODE_SMELL
+k	java:S106!"9Replace this use of System.out or System.err by a logger.(æŒ˜”8ŽóÉ˜¦1HïpRMAJORZ
+CODE_SMELL
+k	java:S106"9Replace this use of System.out or System.err by a logger.(åÒ¥‘8ŽóÉ˜¦1HðpRMAJORZ
+CODE_SMELL
+k	java:S106"9Replace this use of System.out or System.err by a logger.(½ÛÃÒ8«Àƒ˜¦1HñpRMAJORZ
+CODE_SMELL
+r
+java:S1854˜"9Remove this useless assignment to local variable "after".(‚©åŸúÿÿÿÿ8ô©ëÏ¨1HòpRMAJORZ
+CODE_SMELL

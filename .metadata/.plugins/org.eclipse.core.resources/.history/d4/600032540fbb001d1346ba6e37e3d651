@@ -1,0 +1,11 @@
+package practice;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class Streams {
+public static void main(String[] args) {
+	List<Integer> numbers=Arrays.asList(1,23,56,5,89,25);
+	numbers.stream().forEach(x->System.out.print(x));
+}
+}

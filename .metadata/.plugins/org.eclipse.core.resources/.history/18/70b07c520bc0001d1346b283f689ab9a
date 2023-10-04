@@ -1,0 +1,5 @@
+package practice;
+//grouping given chars
+public class GroupingChars01 {
+
+}

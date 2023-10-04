@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;com.javatechie.spring.swagger.api.config&apos; to &apos;citizen_service/src/main/java/com.citizen_service&apos;&#x0A;- Original project: &apos;spring-swagger&apos;&#x0A;- Destination element: &apos;citizen_service/src/main/java/com.citizen_service&apos;&#x0A;- Original element: &apos;spring-swagger/src/main/java/com.javatechie.spring.swagger.api.config&apos;" description="Copy package" destination="=citizen_service/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.citizen_service" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.javatechie.spring.swagger.api.config" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1681348169873" version="1.0"/>
+</session>

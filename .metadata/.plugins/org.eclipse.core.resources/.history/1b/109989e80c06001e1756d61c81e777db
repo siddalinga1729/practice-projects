@@ -1,0 +1,15 @@
+package com.SchoolManagementapp.entity;
+
+import java.util.List;
+
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.OneToMany;
+
+public class Teacher {
+private long id;
+private String teacherName;
+private String userName;
+@OneToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+private List<Subject> subjects;
+}

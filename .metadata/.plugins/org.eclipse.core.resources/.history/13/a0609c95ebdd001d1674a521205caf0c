@@ -1,0 +1,13 @@
+package com.elementcollectiondemo.service;
+
+import com.elementcollectiondemo.entity.Student;
+
+public class StudentServiceImpl implements StudentService {
+
+	@Override
+	public void saveStudent(Student student) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,126 @@
+package com.javatechie.service;
+
+import java.lang.reflect.Field;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Optional;
+
+import javax.servlet.ServletOutputStream;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.util.ReflectionUtils;
+
+import com.itextpdf.text.BaseColor;
+import com.itextpdf.text.Chunk;
+import com.itextpdf.text.Document;
+import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.Element;
+import com.itextpdf.text.Font;
+import com.itextpdf.text.FontFactory;
+import com.itextpdf.text.Phrase;
+import com.itextpdf.text.pdf.PdfPCell;
+import com.itextpdf.text.pdf.PdfPTable;
+import com.itextpdf.text.pdf.PdfWriter;
+import com.javatechie.entity.Product;
+import com.javatechie.request.ReportRequest;
+import com.javatechie.respository.ProductRepository;
+
+@Service
+public class ProductService {
+
+	@Autowired
+	private ProductRepository repository;
+
+	public Product saveProduct(Product product) {
+		return repository.save(product);
+	}
+
+	public List<Product> getProducts() {
+		return repository.findAll();
+	}
+
+	public Product getProductById(int id) {
+		return repository.findById(id).get();
+	}
+
+	public Product updateProduct(int id, Product productRequest) {
+		// get the product from DB by id
+		// update with new value getting from request
+		Product existingProduct = repository.findById(id).get(); // DB
+		existingProduct.setName(productRequest.getName());
+		existingProduct.setDescription(productRequest.getDescription());
+		existingProduct.setPrice(productRequest.getPrice());
+		existingProduct.setProductType(productRequest.getProductType());
+		return repository.save(existingProduct);
+	}
+
+	public long deleteProduct(int id) {
+		repository.deleteById(id);
+		return repository.count();
+	}
+
+	public Product updateProductByFields(int id, Map<String, Object> fields) {
+		Optional<Product> existingProduct = repository.findById(id);
+		if (existingProduct.isPresent()) {
+			fields.forEach((key, value) -> {
+				Field field = ReflectionUtils.findField(Product.class, key);
+				field.setAccessible(true);
+				ReflectionUtils.setField(field, existingProduct.get(), value);
+			});
+			return repository.save(existingProduct.get());
+		}
+		return null;
+	}
+
+	public List<Product> findAll() {
+
+		return repository.findAll();
+	}
+
+	public void postConstruct() {
+		System.out.println("Postconstruct");
+	}
+	
+	public void dataToPdf(ReportRequest data,ServletOutputStream out) throws DocumentException {
+		 Document document = new Document();
+		    PdfWriter.getInstance(document, out);
+		    document.open();
+		    PdfPTable table = new PdfPTable(data.getData().size()); // 2 columns
+		    table.setWidthPercentage(100);
+		    table.setSpacingBefore(10);
+		    table.setSpacingAfter(10);
+		    
+		    Font font = FontFactory.getFont(FontFactory.TIMES_ROMAN, 12, BaseColor.BLACK);
+		    Chunk chunk = new Chunk("title: "+data.getTitle(), font);
+		    Chunk chunk1 = new Chunk("", font);
+
+		    addTableHeader(table,data);
+		    addTableRows(table, data);
+		    document.add(chunk);
+		    document.add(chunk1);
+		    document.add(table);
+		    document.close();
+
+	}
+	private void addTableHeader(PdfPTable table,ReportRequest data) {
+		List<PdfPCell> cells=new ArrayList<>();
+		for(Entry<String,String> entry:data.getData().entrySet()){
+			PdfPCell pdfPCell = new PdfPCell(new Phrase(entry.getKey()));
+			  cells.add(pdfPCell);
+		}
+		for (PdfPCell pdfPCell : cells) {
+			pdfPCell.setHorizontalAlignment(Element.HEADER);
+			table.addCell(pdfPCell);
+		}
+	  }
+	 private void addTableRows(PdfPTable table, ReportRequest data) {
+		    	for(Entry<String,String> entry:data.getData().entrySet()){
+		    		 table.addCell(data.getData().get(entry.getKey()));
+				     // table.addCell(data.getData().get(entry.getKey()));
+		    	}
+		     
+		  }
+}

@@ -1,0 +1,8 @@
+package practice;
+
+public class G {
+public static void main(String[] args) {
+	//Long m=(long)(Math.random());
+	System.out.println(Math.random()*1000000);
+}
+}
